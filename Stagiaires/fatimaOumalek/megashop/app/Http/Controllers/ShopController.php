@@ -14,13 +14,16 @@ class ShopController extends Controller
 
     
     public function contact()
-    {
-        return view('contact');
-    }
+{
+    $contact = config('data.contact');
+    return view('contact', compact('contact'));
+}
+
 
     
     public function cgv()
-    {
-        return view('cgv');
-    }
+{
+    $sections = config('data.cgv');
+    return view('cgv', compact('sections'));
+}
 }
